@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ country }} Info</title>
+</head>
+<body>
+    <h1>{{ country }} Information</h1>
+    <h2>Ask a Question</h2>
+    <form action="/country?country={{ country }}" method="post">
+        <input type="text" name="question" placeholder="Ask about {{ country }}...">
+        <button type="submit">Ask</button>
+    </form>
+
+    {% if answer %}
+        <h3>Answer:</h3>
+        <p>{{ answer }}</p>
+    {% endif %}
+
+    <br>
+    <a href="/">Back to Home</a>
+</body>
+</html>
